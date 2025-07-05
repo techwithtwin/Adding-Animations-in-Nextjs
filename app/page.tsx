@@ -7,11 +7,12 @@ export default function Home() {
         Random Foxes using Fade Up
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {Array.from({ length: 9 }, (_, i) => i + 1).map((item) => (
+        {Array.from({ length: 9 }, (_, i) => i + 1).map((i) => (
           <Card
-            key={item}
+            key={i}
             animation="fade-up"
-            imgUrl={`https://randomfox.ca/images/${item}.jpg`}
+            delay={i * 50}
+            imgUrl={`https://randomfox.ca/images/${i}.jpg`}
           />
         ))}
       </div>
