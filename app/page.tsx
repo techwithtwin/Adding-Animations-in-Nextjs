@@ -8,7 +8,11 @@ export default function Home() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {Array.from({ length: 9 }, (_, i) => i + 1).map((item) => (
-          <Card key={item} imgUrl={`https://randomfox.ca/images/${item}.jpg`} />
+          <Card
+            key={item}
+            animation="fade-up"
+            imgUrl={`https://randomfox.ca/images/${item}.jpg`}
+          />
         ))}
       </div>
       <h1 className="text-3xl font-bold text-center">
@@ -16,7 +20,7 @@ export default function Home() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {randomDogs.map((item) => (
-          <Card key={item} imgUrl={item} />
+          <Card animation="zoom-in" key={item} imgUrl={item} />
         ))}
       </div>
     </div>
